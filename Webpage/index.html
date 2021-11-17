@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>Sidewalksolve</title>
+        <link rel="stylesheet" href="dist/css/main_style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="shortcut icon" href="#" />
+        <link rel="stylesheet" href="dist/css/_addition_styles.css">
+		<link rel="icon" href="/dist/img/favicon.ico">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="nav-hamburger">
+            <div class="nav-hamburger-btn"></div>
+        </div>
+        <div class="navbar-absolute-top">
+            <div class="navbar">
+                <nav>
+                    <div class="nav-logo">
+                            <div class="logo"> <img src="dist/img/logo.png" class="logo-image">Sidewalksolve.xyz</div>
+                    </div>
+                    <div class="nav-links">
+                        <ul>
+                            <li class="Admin">
+                                <button class="admin_login_page">Admin</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+         <!--================== Admin login page ===================-->
+         <div class="main__login">
+            <div class="login__wrapper">
+                <div class="infologin__wrapper">   
+                    <div>
+                        <h1><span>Login</span> as a admin user</h1>
+                    </div>
+                    <div class="info__login">
+                    <div>
+                        <div class="info">
+                            <div>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
+                            </div>
+                            <p>
+                                The admin dashboard is used for Sidewalksolve admin account only. An account will be 
+                                created only when it is authorized to access to the admin dashboard.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="close_login">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#646B8C;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="close"><g id="close-2" data-name="close"><rect class="cls-1" width="24" height="24" transform="translate(24 24) rotate(180)"/><path class="cls-2" d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></g></g></g></svg>
+                    </button>
+                </div>
+                    <section class="error_message">
+                        <?php if (isset($_GET['error'])) { ?>
+                            <div>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-circle" class="svg-inline--fa fa-exclamation-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path>
+                                </svg>
+                            </div>
+                            <p>
+                                <?=$_GET['error'] ?>
+                                <?php if ($_GET['loginError'] == 'invalid') { ?>
+                                    <?='Note that both field may be case-sensitive.' ?>
+                                <?php } ?>
+                            </p>
+                        <?php } ?>
+                    </section>
+    
+                    <form action="./php/admin_login.php" id="admin-login" method="POST">
+                        <label for="admin_username">Username</label>
+                        <div>
+                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></svg>
+                            <input type="text" class="login username_field" placeholder="Enter your username" name="admin_username"/>
+                        </div>
+                        <label for="admin_username">Password</label>
+                        <div>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="key" class="svg-inline--fa fa-key fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"></path></svg> 
+                            <input type="password" class="login password_field" placeholder="Enter your password" name="admin_password"/>
+                            <button type="button" class="toggle_show_password">
+                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path></svg>
+                            </button>
+                        </div>
+                        <div>
+                            <input class="button" type="submit" name="signin" value="Login"/>
+                        </div>
+                    </form>
+                    
+                    <?php if (isset($_GET['error'])) {
+                        $errorType = $_GET['loginError'];
+                        if ($errorType == 'invalid' || $errorType == 'usernameandpassword') {
+                            echo "  <script>
+                                        let x = document.getElementsByClassName('username_field')[0];
+                                        let y = document.getElementsByClassName('password_field')[0];
+                                        x.style.borderColor = '#ffa8a8';
+                                        y.style.borderColor = '#ffa8a8';
+                                    </script>";
+                        }
+                        else {
+                            echo "  <script>
+                                        let x = document.getElementsByClassName('".$errorType."_field')[0];
+                                        x.style.borderColor = '#ffa8a8';
+                                    </script>"; 
+                        }
+                    } ?>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <nav class="sec-navbar">
+            <ul class="sec-navbar-nav">
+                <div></div>
+                <li>
+                    <a class="nav-items" href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cat" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cat fa-w-16 fa-9x">
+                            <g class="fa-group">
+                            <path
+                                fill="currentColor"
+                                d="M448 96h-64l-64-64v134.4a96 96 0 0 0 192 0V32zm-72 80a16 16 0 1 1 16-16 16 16 0 0 1-16 16zm80 0a16 16 0 1 1 16-16 16 16 0 0 1-16 16zm-165.41 16a204.07 204.07 0 0 0-34.59 2.89V272l-43.15-64.73a183.93 183.93 0 0 0-44.37 26.17L192 304l-60.94-30.47L128 272v-80a96.1 96.1 0 0 0-96-96 32 32 0 0 0 0 64 32 32 0 0 1 32 32v256a64.06 64.06 0 0 0 64 64h176a16 16 0 0 0 16-16v-16a32 32 0 0 0-32-32h-32l128-96v144a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16V289.86a126.78 126.78 0 0 1-32 4.54c-61.81 0-113.52-44.05-125.41-102.4z"
+                                class="fa-secondary"></path>
+                            <path
+                                fill="currentColor"
+                                d="M376 144a16 16 0 1 0 16 16 16 16 0 0 0-16-16zm80 0a16 16 0 1 0 16 16 16 16 0 0 0-16-16zM131.06 273.53L192 304l-23.52-70.56a192.06 192.06 0 0 0-37.42 40.09zM256 272v-77.11a198.62 198.62 0 0 0-43.15 12.38z"
+                                class="fa-primary"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-items"  onclick="    document.body.classList.add('stop_scrolling');
+    document.getElementsByClassName('main__login')[0].style.display = 'flex';
+    document.getElementsByClassName('fullscreen__background')[0].style.display = 'flex';">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="door-open" class="svg-inline--fa fa-door-open fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M624 448h-80V113.45C544 86.19 522.47 64 496 64H384v64h96v384h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM312.24 1.01l-192 49.74C105.99 54.44 96 67.7 96 82.92V448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h336V33.18c0-21.58-19.56-37.41-39.76-32.17zM264 288c-13.25 0-24-14.33-24-32s10.75-32 24-32 24 14.33 24 32-10.75 32-24 32z"></path></svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- ============== Form ============== -->
+        <section id="Contact">
+            <div class="form-wrapper">
+                <div class="row-form">
+                    <p>FORM</p>
+                    <h1>Make a Complaint</h1>
+                    <h3>
+                        // This project is prepared in partial fulfillment of the requirements for the Software Development Practice I subject which is a part of the computer enginerring — <a href="https://cpre.eng.kmutnb.ac.th/" target="_blank">CPRE</a> — curriculum in King Mongkut’s University of Technology North Bangkok — <a href="https://www.kmutnb.ac.th/" target="_blank">KMUTNB</a> — Thailand.
+                    </h3>
+                    <h3>
+                        This form is created for people who encounter motocycle problems on the pavement and wish to make a complaint to let the authorities know and decide the problem. Please fill in the details below for lodging a complaint.
+                    </h3>
+                    <section>
+                        <div>
+                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="lightbulb" class="svg-inline--fa fa-lightbulb fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16 16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06 459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32 7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7 2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0 44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42 92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64 59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24 60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0 0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55 260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"></path></svg>
+                        </div>
+                        <div>
+                             <span>Please note:</span>
+                            Every complaint shall be heard as expeditiously as possible and all attempts will be made to decide the complaint within a period of three months 
+                            from the date of receipt of your notice.
+                        </div>
+                    </section>
+                
+                    
+                    <div class="invalid-form">
+                        <!-- ============== Error message area ============== -->
+                    </div>
+                    <div class="col-form">
+                        <label for="first_name">First name</label>
+                        <label for="last_name">Last name</label>
+
+                        <!-- ============== First name ============== -->
+                        <div class="input__field first_name">
+                            <div class="icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></svg>
+                            </div>
+                            <form action="#" id="first_name" method="POST" class="text" name="connect_form">
+                                    <input type="text" name="first_name" id="fn" placeholder="First name" spellcheck="false" autocomplete="off" title="First name" required/>
+                            </form>
+                            <button class="clear fn" onclick="clearInput('fn')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#646B8C;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="close"><g id="close-2" data-name="close"><rect class="cls-1" width="24" height="24" transform="translate(24 24) rotate(180)"/><path class="cls-2" d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></g></g></g></svg>
+                            </button>
+                        </div>
+
+                        <!-- ============== Last name ============== -->
+                        <div class="input__field last_name">
+                            <div class="icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></svg>
+                            </div>
+                            <form action="" id="last_name" method="POST" class="text" name="connect_form" >
+                                <input type="text" name="last_name" id="ln" placeholder="Last name" spellcheck="false" autocomplete="off" title="Last name" required/>
+                            </form>
+                            <button class="clear ln" onclick="clearInput('ln')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#646B8C;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="close"><g id="close-2" data-name="close"><rect class="cls-1" width="24" height="24" transform="translate(24 24) rotate(180)"/><path class="cls-2" d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></g></g></g></svg>
+                            </button>
+                        </div>
+
+                        <label for="id_number">Identification card number</label>
+                        <label for="phone_number">Phone number</label>
+
+                        <!-- ============== Identification card number ============== -->
+                        <div class="input__field id_number">
+                            <div class="icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="feather" class="svg-inline--fa fa-feather fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M467.14 44.84c-62.55-62.48-161.67-64.78-252.28 25.73-78.61 78.52-60.98 60.92-85.75 85.66-60.46 60.39-70.39 150.83-63.64 211.17l178.44-178.25c6.26-6.25 16.4-6.25 22.65 0s6.25 16.38 0 22.63L7.04 471.03c-9.38 9.37-9.38 24.57 0 33.94 9.38 9.37 24.6 9.37 33.98 0l66.1-66.03C159.42 454.65 279 457.11 353.95 384h-98.19l147.57-49.14c49.99-49.93 36.38-36.18 46.31-46.86h-97.78l131.54-43.8c45.44-74.46 34.31-148.84-16.26-199.36z"></path></svg>
+                            </div>
+                            <form action="" id="id_number" method="POST" class="text" name="connect_form" >
+                                <input type="text" name="id_number" id="idn" placeholder="ID number" spellcheck="false" maxlength="13" autocomplete="off" title="Id card number" required/>
+                            </form>
+                            <button class="clear idn" onclick="clearInput('idn')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#646B8C;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="close"><g id="close-2" data-name="close"><rect class="cls-1" width="24" height="24" transform="translate(24 24) rotate(180)"/><path class="cls-2" d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></g></g></g></svg>
+                            </button>
+                        </div>
+
+                        <!-- ============== Phone number ============== -->
+                        <div class="input__field phone_number">
+                            <div class="icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>
+                            </div>
+                            <form action="" id="phone_number" method="POST" class="text" name="connect_form" >
+                                <input type="text" name="phone_number" id="pn" placeholder="Phone number" spellcheck="false" name="phone" maxlength="10" autocomplete="off" title="Phone number" required/>
+                            </form>
+                            <button class="clear pn" onclick="clearInput('pn')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#646B8C;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="close"><g id="close-2" data-name="close"><rect class="cls-1" width="24" height="24" transform="translate(24 24) rotate(180)"/><path class="cls-2" d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></g></g></g></svg>
+                            </button>
+                        </div>
+                        <div class="invalid-input" id="invalid_id"></div>
+                        <div class="invalid-input" id="invalid_phone"></div>
+
+                        <label for="user_address">Address</label>
+
+                        <!-- ============== Address ============== -->
+                        <div class="input__field user_address">
+                            <div class="icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-arrow" class="svg-inline--fa fa-location-arrow fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"></path></svg>
+                            </div>
+                            <form action="" id="user_address" method="POST" class="textarea" name="connect_form" >
+                                <textarea placeholder="Your address" id="ua" name="user_address" rows="3" required ></textarea>
+                            </form>
+                        </div>
+                        
+                        <!-- Checkbox -->
+                        <div class="Anonymous-toggle">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Anonymous: Not disclose personal information.</span>
+                            </label>
+                        </div>
+
+                        <label for="date">Date</label>
+
+                        <!-- ============== Date ============== -->
+                        <div class="input__field date">
+                            <div class="icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>                            
+                            </div>
+                            <form action="" id="date" method="POST" class="text" name="connect_form" >
+                                <input type="datetime-local" name="date" id="d" name="date"  value=""
+                                placeholder="Date" min="2021-01-01T00:00" max="2021-12-31T00:00" title="Date" required/>
+                            </form>
+                            <button class="clear d" onclick="clearInput('d')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#646B8C;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="close"><g id="close-2" data-name="close"><rect class="cls-1" width="24" height="24" transform="translate(24 24) rotate(180)"/><path class="cls-2" d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></g></g></g></svg>
+                            </button>
+                        </div>
+
+                        <label for="file-upload" class="Attach-files">Attach files (Total selected files: 0)</label>
+
+                        <!-- ============== Images upload ============== -->
+                        <div class="input__field file-upload">
+                            <form action="./php/test.php" method="POST" enctype="multipart/form-data" id="myform" class="image-form">
+                                <label for="file-upload" name="upload[]" class="custom-file-upload button">
+                                    <span class="icon">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-image" class="svg-inline--fa fa-file-image fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M384 121.941V128H256V0h6.059a24 24 0 0 1 16.97 7.029l97.941 97.941a24.002 24.002 0 0 1 7.03 16.971zM248 160c-13.2 0-24-10.8-24-24V0H24C10.745 0 0 10.745 0 24v464c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V160H248zm-135.455 16c26.51 0 48 21.49 48 48s-21.49 48-48 48-48-21.49-48-48 21.491-48 48-48zm208 240h-256l.485-48.485L104.545 328c4.686-4.686 11.799-4.201 16.485.485L160.545 368 264.06 264.485c4.686-4.686 12.284-4.686 16.971 0L320.545 304v112z"></path></svg>                                    
+                                    </span>
+                                </label>
+                                <input type="file" name="upload[]" id="file-upload" multiple="multiple" accept="video/*,image/*" required/>
+                            </form>
+                            <div id="file-name"><p class="current-no-file"></div>
+                        </div>
+                        <div class="invalid-input" id="invalid_ext"></div>
+
+                        <label for="description">Description</label>
+
+                        <!-- ============== Description ============== -->
+                        <div class="input__field description">
+                                <div class="icon">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg>                            
+                                </div>
+                                <form action="" id="description" method="POST" class="textarea" name="connect_form">
+                                    <textarea placeholder="Please provide any detail" name="description" rows="3" required ></textarea>
+                                </form>
+                        </div>
+
+                        <div class="submit-btn"><button class="button" type="submit" name="Btnsubmit" onclick="return submitForm()" form="myform">Send confirmation</button></div>
+                    </div>
+
+                </div>
+            </div>
+        <div id="google_translate_element"></div>
+        </section>
+
+        <!--================== Footer ===================-->
+        <div class="footer__border">
+            <div class="logo">
+                <h1 onclick="window.scrollTo(0, 0)">Sidewalksolve</h1>
+            </div>
+            <section>
+                <a href="https://www.facebook.com/Sidewalksolve/">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                </a>
+                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=422phooi">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="line" class="svg-inline--fa fa-line fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"></path></svg>
+                </a>
+            </section>
+        </div>
+        
+        <?php
+
+            if (isset($_GET['error'])) {
+                echo "<script>document.getElementsByClassName('main__login')[0].style.display = 'flex';</script>";
+            }
+        ?>
+        
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: 'en',
+                  layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+              }, 'google_translate_element');
+            }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+        <script src="scripts.js"></script>
+        <script src="adminLogin.js"></script>
+        <script src="websockets.js"></script>
+
+        <script>
+            function clearInput(id_name) {
+                if (document.getElementById(id_name).value != '') {
+                    document.getElementById(id_name).value='';
+                }
+                clear.forEach(element => {
+                    if (element.querySelector('.'.concat(id_name))) {
+                        element.querySelector('.clear').style.opacity = 0;
+                        document.getElementsByClassName(id_name)[0].style.display = 'none'
+                    }
+                })
+            }
+        </script>
+    </body>
+</html> 

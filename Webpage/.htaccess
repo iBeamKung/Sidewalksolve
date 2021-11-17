@@ -1,0 +1,10 @@
+AddHandler x-httpd-php .html .htm
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{HTTP_HOST} ^www.sidewalksolve.xyz [NC]
+    RewriteRule ^(.*)$ http://sidewalksolve.xyz/$1 [L,R=301]
+</IfModule>
+
+php_value date.timezone 'Asia/Bangkok'
