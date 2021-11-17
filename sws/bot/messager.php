@@ -3,14 +3,14 @@
 date_default_timezone_set('Asia/Bangkok');		//กำหนดค่าให้  timestamp ที่จะรับเข้ามาเป็นเวลาตามประเทศไทย
 require('vendor/autoload.php');
 use \PhpMqtt\Client\MqttClient;
-$server   = '203.146.252.179';			//กำหนดเลข server, port, clientId เพื่อทำ mqtt
+$server   = ' YOUR MQTT BROKER ';			//กำหนดเลข server, port, clientId เพื่อทำ mqtt
 $port     = 1883;
 $clientId = 'Facebook Client';
 
 $mqtt = new \PhpMqtt\Client\MqttClient($server, $port, $clientId);
 $mqtt->connect();		//เชื่อมต่อ mqtt
 
-$access_token = 'EAAIuoA8a2DEBAJZBTl7fzkHZAkfyS4aGdXQbAedtG9B6xN7XIkAaVVNS0W5YWyQA8oy1ZCU0FTd7rdNX8LtpFfxuVxNQh7L3mE44lb2VQaiXwbrpIBo8zJ994vQfLCDYhGk1Y4g8BqgA4VQQ0OBUyrGL49oFTV4FUApQUiLB5e8jPol5zGm'; //access_token ของเพจ facebook
+$access_token = ' YOUR ACCESS TOKEN '; //access_token ของเพจ facebook
 $verify_token = 'sidewalksolve';									
 
 if (isset($_GET['hub_verify_token'])) { 

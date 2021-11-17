@@ -3,7 +3,7 @@
 date_default_timezone_set('Asia/Bangkok'); //กำหนดค่าให้  timestamp ที่จะรับเข้ามาเป็นเวลาตามประเทศไทย
 require('vendor/autoload.php');
 use \PhpMqtt\Client\MqttClient;
-$server   = '203.146.252.179'; //กำหนดเลข server, port, clientId เพื่อทำ mqtt
+$server   = ' YOUR MQTT Broker '; //กำหนดเลข server, port, clientId เพื่อทำ mqtt
 $port     = 1883;
 $clientId = 'Line Client';
 
@@ -327,7 +327,7 @@ else //ถ้าเป็น type อื่น
 }
 
 $lineData['URL'] = "https://api.line.me/v2/bot/message/reply";
-$lineData['AccessToken'] = "(ufXK/2GNqBYv3nLxa3UUnnYz6NzoTO3GsBI+9z5lzvbrjqoTZOva+IjBlxaDKazf6zEexNTk0Wo4sCXczZCqCHLfux/817VkeX6BkcZR0nSeo1ps3V6cZHC9c+rrPsX2PWOTQs0VuhGlAYtQ3EdXWQdB04t89/1O/w1cDnyilFU=)";
+$lineData['AccessToken'] = " YOUR ACCESS TOKEN ";
 $encodeJson = json_encode($replyJson);
 $results = sendMessage($encodeJson,$lineData); //ส่งข้อมูลที่อยู่ใน replyJson กลับไปหาผู้ใช้เพจ
 ?>
