@@ -2,5 +2,5 @@
 /// การตั้งค่าเกี่ยวกับ bot ใน LINE Messaging API
 define('LINE_MESSAGE_CHANNEL_ID','1656463017');
 define('LINE_MESSAGE_CHANNEL_SECRET','e93a44e1879494d2d456f85eb93fd3eb');
-define('LINE_MESSAGE_ACCESS_TOKEN','------'); // <-- Line ACCESS_TOKEN
+define('LINE_MESSAGE_ACCESS_TOKEN','ufXK/2GNqBYv3nLxa3UUnnYz6NzoTO3GsBI+9z5lzvbrjqoTZOva+IjBlxaDKazf6zEexNTk0Wo4sCXczZCqCHLfux/817VkeX6BkcZR0nSeo1ps3V6cZHC9c+rrPsX2PWOTQs0VuhGlAYtQ3EdXWQdB04t89/1O/w1cDnyilFU=');
 ?>
