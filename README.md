@@ -4,5 +4,5 @@
   <img src="./image/logo-1500x1100.png" width="250" alt="accessibility text">
 </p>
 
-โปรเจคนี้เป็นส่วนหนึ่งของรายวิชา 010123131 Software Development Practice I (1/2564)
+โปรเจคนี้เป็นส่วนหนึ่งของรายวิชา 010123131 Software Development Practice I (1/2564)<br />
 คณะวิศวะกรรมคอมพิวเตอร์  มหาวิทยาลัยพระจอมเกล้าพระนครเหนือ
