@@ -1,4 +1,4 @@
-# Sidewalksolve - ระบบแก้ปัญหามอเตอร์ไซค์บนทางเท้า
+# Sidewalksolve ✌
 
 This project is prepared in partial fulfillment of the requirements for the Software Development Practice I subject 010123131 which is a part of the computer engineering curriculum in King Mongkut’s University of Technology North Bangkok — <a href="https://www.kmutnb.ac.th/">KMUTNB</a> — Thailand. **Sidewalksolve** is a place for people who encounter motocycle problems on the pavement and wish to make a complaint to let the authorities know and decide the problem. With Sidewalksolve, citizens can now submit photos of illegal activities on the pavements with any details via online system to the authorities for further legal action. Sidewalksolve aims to let all citizens have the opportunity to help check the orderliness of the country.
 
