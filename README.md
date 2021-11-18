@@ -1,13 +1,13 @@
-# SideWalkSolve - ระบบแก้ปัญหามอเตอร์ไซค์บนทางเท้า
+# Sidewalksolve - ระบบแก้ปัญหามอเตอร์ไซค์บนทางเท้า
 
-<p align="left">
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/logo-1500x1100.png?raw=true" width="250">
-</p>
+This project is prepared in partial fulfillment of the requirements for the Software Development Practice I subject 010123131 which is a part of the computer engineering curriculum in King Mongkut’s University of Technology North Bangkok — <a href="https://www.kmutnb.ac.th/">KMUTNB</a> — Thailand. **Sidewalksolve** is a channel for people who encounter motocycle problems on the pavement and wish to make a complaint to let the authorities know and decide the problem. With Sidewalksolve, citizens can now submit photos of illegal acttivities on the pavements with any details via online system to the authorities for further legal action. Sidewalksolve aims to let all citizens have the opportunity to help check the orderliness of the country.
 
-โปรเจคนี้เป็นส่วนหนึ่งของรายวิชา 010123131 Software Development Practice I (1/2564)<br />
-คณะวิศวะกรรมคอมพิวเตอร์  มหาวิทยาลัยพระจอมเกล้าพระนครเหนือ
-
-This project is prepared in partial fulfillment of the requirements for the Software Development Practice I subject 010123131 which is a part of the computer engineering curriculum in King Mongkut’s University of Technology North Bangkok — <a href="https://www.kmutnb.ac.th/">KMUTNB</a> — Thailand. **Sidewalksolve** is the place for people who encounter motocycle problems on the pavement and wish to make a complaint to let the authorities know and decide the problem. Now citizens can submit photos of illegal acttivities on the pavements with any details to the authorities for further legal action. Sidewalksolve aims to let all citizens will have the opportunity to help check the orderliness of the country.
+### Team Members
+- "Netipat Suksai" s6301012610019@email.kmutnb.ac.th
+- "Vasapol Rittideah" s6301012620171@email.kmutnb.ac.th
+- "Nathanan Srijant" s6301012630095@email.kmutnb.ac.th
+- "Taksaporn Nuangkaew" s6301012630052@email.kmutnb.ac.th
+- "Prompaun thitipoomdeja" s6301012630133@email.kmutnb.ac.th
 
 Overview - ภาพรวมของระบบ
 ----
