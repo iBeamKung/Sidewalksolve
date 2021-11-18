@@ -7,6 +7,8 @@
 โปรเจคนี้เป็นส่วนหนึ่งของรายวิชา 010123131 Software Development Practice I (1/2564)<br />
 คณะวิศวะกรรมคอมพิวเตอร์  มหาวิทยาลัยพระจอมเกล้าพระนครเหนือ
 
+This project is prepared in partial fulfillment of the requirements for the Software Development Practice I subject 010123131 which is a part of the computer engineering curriculum in King Mongkut’s University of Technology North Bangkok — <a href="https://www.kmutnb.ac.th/">KMUTNB</a> — Thailand. For people who encounter motocycle problems on the pavement and wish to make a complaint to let the authorities know and decide the problem, **Sidewalksolve** is the right place
+
 Overview - ภาพรวมของระบบ
 ----
 <p align="left">
