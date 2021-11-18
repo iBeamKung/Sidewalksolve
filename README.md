@@ -1,6 +1,6 @@
 # Sidewalksolve - ระบบแก้ปัญหามอเตอร์ไซค์บนทางเท้า
 
-This project is prepared in partial fulfillment of the requirements for the Software Development Practice I subject 010123131 which is a part of the computer engineering curriculum in King Mongkut’s University of Technology North Bangkok — <a href="https://www.kmutnb.ac.th/">KMUTNB</a> — Thailand. **Sidewalksolve** is a channel for people who encounter motocycle problems on the pavement and wish to make a complaint to let the authorities know and decide the problem. With Sidewalksolve, citizens can now submit photos of illegal acttivities on the pavements with any details via online system to the authorities for further legal action. Sidewalksolve aims to let all citizens have the opportunity to help check the orderliness of the country.
+This project is prepared in partial fulfillment of the requirements for the Software Development Practice I subject 010123131 which is a part of the computer engineering curriculum in King Mongkut’s University of Technology North Bangkok — <a href="https://www.kmutnb.ac.th/">KMUTNB</a> — Thailand. **Sidewalksolve** is a place for people who encounter motocycle problems on the pavement and wish to make a complaint to let the authorities know and decide the problem. With Sidewalksolve, citizens can now submit photos of illegal activities on the pavements with any details via online system to the authorities for further legal action. Sidewalksolve aims to let all citizens have the opportunity to help check the orderliness of the country.
 
 ## Team Members
 - "Netipat Suksai" s6301012610019@email.kmutnb.ac.th
@@ -9,22 +9,21 @@ This project is prepared in partial fulfillment of the requirements for the Soft
 - "Taksaporn Nuangkaew" s6301012630052@email.kmutnb.ac.th
 - "Prompaun thitipoomdeja" s6301012630133@email.kmutnb.ac.th
 
-Overview - ภาพรวมของระบบ
-----
+# Overview - ภาพรวมของระบบ
+
 <p align="left">
   <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/overview2.png?raw=true">
 </p>
 
-### ระบบนี้จะ UI ช่องทางในการรับปัญหาอยู่ 3 รูปแบบ คือ
-- Webpage
-- Line
-- Facebook Messager
+There are 3 channels for making a complaint with Sidewalksolve: **Web page**, **LINE**, and **Facebook Messenger**.
 
-#### Webpage
-จะใช้ภาษา HTML,CSS,JS เป็น UI ในการแสดงผล UI ในเว็ปเพราะง่ายต่อการเรียนรู้และการออกแบบ
+## Web page
+Our webpage are programmed with 3 programming languages: **HTML**, **CSS**, and **JavaScript**. HTML (HyperText Markup Language) is the primary language used to write web pages. It defines the meaning and structure of web content. CSS (Cascading Style Sheets) and JavaScript (JS) are other technologies besides HTML that are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JS). You can simply type <a href="https://sidewalksolve.xyz/">sidewalksolve.xyz</a> URL in any web brower in order to access to Sidewalksolve web page.
 
-#### Line
-โดยตัวระบบ Line นั้นได้มีระบบห้องแชทที่เรียกว่า Line Official Account ซึ่งได้มีระบบ Messaging API ซึ่งทำให้เราสามารถส่งข้อความได้โดยการสื่อสารกันแบบ HTTP Request ในรูปแบบ JSON
+
+## LINE
+There is Sidewalksolve LINE official account for making a complaint via LINE. It is created with messaging API for building a bot that provide personalized experiences for our users on LINE. This allows us to send messages or photos about our complaint easily by communicating using HTTP Request Methods in JSON format.
+
 
 #### Facebook Messager
 ระบบของ Facebook นั้นจะเรียกว่า Messager โดยเราสามารถสร้างหน้าเพจ Facebook แล้วให้เชื่อมต่อกับ Messager ได้โดยที่มี API รองรับในการส่งข้อความไปใน Messager ให้บุคคลได้
