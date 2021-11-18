@@ -1,7 +1,7 @@
 # SideWalkSolve - ระบบแก้ปัญหามอเตอร์ไซค์บนทางเท้า
 
 <p align="left">
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/logo-1500x1100.png" width="250" alt="accessibility text">
+  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/logo-1500x1100.png?raw=true" width="250">
 </p>
 
 โปรเจคนี้เป็นส่วนหนึ่งของรายวิชา 010123131 Software Development Practice I (1/2564)<br />
@@ -10,28 +10,39 @@
 Overview - ภาพรวมของระบบ
 ----
 <p align="left">
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/overview2.png" alt="accessibility text">
+  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/overview2.png?raw=true">
 </p>
 
-ระบบจะแบ่งเป็น 3 ส่วน:
+### ระบบนี้จะ UI ช่องทางในการรับปัญหาอยู่ 3 รูปแบบ คือ
+- Webpage
+- Line
+- Facebook Messager
 
-- [Webpage] - ส่วนของหน้า Webpage
-- [Heroku] - ส่วนของหน้า LineBot FacebookBot
-- [C] - ส่วนของภาษา C MQTT
+#### Webpage
+จะใช้ภาษา HTML,CSS,JS เป็น UI ในการแสดงผล UI ในเว็ปเพราะง่ายต่อการเรียนรู้และการออกแบบ
+
+#### Line
+โดยตัวระบบ Line นั้นได้มีระบบห้องแชทที่เรียกว่า Line Official Account ซึ่งได้มีระบบ Messaging API ซึ่งทำให้เราสามารถส่งข้อความได้โดยการสื่อสารกันแบบ HTTP Request ในรูปแบบ JSON
+
+#### Facebook Messager
+ระบบของ Facebook นั้นจะเรียกว่า Messager โดยเราสามารถสร้างหน้าเพจ Facebook แล้วให้เชื่อมต่อกับ Messager ได้โดยที่มี API รองรับในการส่งข้อความไปใน Messager ให้บุคคลได้
+
+### Backend ของเรานั้นจะประกอบไปด้วย 2 ภาษาด้วยกันคือ PHP,C
+
+#### PHP
+เราได้ใช้เป็นเวอชั่น 8.0 ซึ่งเป็นเวอร์ชั่นที่ค่อนข้างใหม่ในปัจจุบัน (17/11/21) โดยเราจะใช้ตัว Composer เป็นตัวจัดการ Library โดยไลบรารี่ที่เราใช้นั้นคือ PHP/MQTT และใช้ CURL ในการสื่อสารผ่าน HTTP Request
+
+#### C
+ตัวภาษา C นั้นเราใช้ในการรับข้อความมาจาก MQTT แล้วนำมาค่ามาใส่ลง MySQL Database โดย Library ที่เราใช้นั้นจะมี
+- json-c เพื่อที่จะรับ JSON จาก MQTT มาประมวลผล
+- mysql.h ใช้ในการจัดการเชื่อต่อกับ Database ในการเก็บข้อมูลของเรา
+- mosquitto.h เป็นไลบรารี่ MQTT Client 
+
+### Database
+ใช้ MySQL เนื่องจากว่าการเก็บข้อมูลของเรานั้นคงที่ในเรื่องของประเภทข้อมูลไม่จำเป็นต้องขยายหัวข้อในการเก็บของข้อมูล
 
 
-Webpage - HTML,CSS,JS
-ในส่วนของหน้าเว็ปนั้นเราได้สร้างขึ้นจาก HTML,CSS,JS ซึ่งหน้าเว็ปจะส่งข้อมูลการแจ้งปัญหาไปให้กับ PHP
+Process - การทำงาน
+----
 
-<p align="left">
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/webpage.png" height="500">
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/WebR1.png" height="500">
-</p>
-
-<p align="left">
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/webadmin.png" height="500">
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/WebR2.png" height="500">
-</p>
-
+### Webpage
