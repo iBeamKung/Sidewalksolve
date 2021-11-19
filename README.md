@@ -19,7 +19,7 @@ There are 3 channels for making a complaint with Sidewalksolve: **Web page**, **
 1. **Web page**<br>
 Our webpage are programmed with 3 programming languages: **HTML**, **CSS**, and **JavaScript**. HTML (HyperText Markup Language) is the primary language used to                 write web pages. It defines the meaning and structure of web content. CSS (Cascading Style Sheets) and JavaScript (JS) are other technologies besides HTML that                are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JS). You can simply type <a                                  href="https://sidewalksolve.xyz/">sidewalksolve.xyz</a> URL in any web brower in order to access to Sidewalksolve web page.
 
-2. **LINE**<br>
+2. **LINE**![Alt text](./line-brands.svg)<img src="./line-brands.svg"><br>
 There is Sidewalksolve LINE official account for making a complaint with LINE. It is created with messaging API for building a bot that provide personalized experiences for our users on LINE. This allows us to send messages or photos about your complaint easily by communicating using HTTP Request Methods in JSON format. If you would like to make a complaint with LINE, you can go through this <a href="https://page.line.me/?accountId=422phooi">link</a>.
 
 
