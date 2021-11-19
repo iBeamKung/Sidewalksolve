@@ -25,7 +25,7 @@ There is Sidewalksolve LINE official account for making a complaint with LINE. I
 
 
 ## Facebook Messenger
-There is Sidewalksolve Facebook official page where you can send messages or photos about your complaint with Facebook by integrate with Messenger API that supports to send messages in Facebook to our users. 
+There is Sidewalksolve Facebook official page where you can send messages or photos about your complaint with Facebook by integrating with Messenger API that supports to send messages in Facebook to our users. 
 
 ### Backend ของเรานั้นจะประกอบไปด้วย 2 ภาษาด้วยกันคือ PHP,C
 
