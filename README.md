@@ -33,7 +33,7 @@ You can see the video demonstration of making a complaint with sidewalksolve in 
 
 <br>
 
-<p align="center"><img src="./image/sidewalksolve.png"></p>
+<p align="center"><img src="./image/sidewalksolve.png" width="auto" height="60"></p>
 
 
 
