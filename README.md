@@ -38,4 +38,3 @@ You can see the video demonstration of making a complaint with sidewalksolve in 
 
 
 
-
