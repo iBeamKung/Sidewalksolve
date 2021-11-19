@@ -30,10 +30,13 @@ There is Sidewalksolve Facebook official page where you can send messages or pho
 - Sidewalksolve web page supports different languages. the web page is translated by Google Translate, which enables all citizens with different ethnicity to make a complaint with Sidewalksolve.
 - You can see the video demonstration of making a complaint with sidewalksolve in this <a href="https://www.youtube.com/watch?v=smIDI_4isQk">link</a>.
 
+# Process
 <p align="left">
   <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/overview2.png?raw=true">
 </p>
 
+- **HTML** (HyperText Markup Language) — is a markup language that is the primary language used to write web page. It determines the structure of web pages using *tags*. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document. 
+- **CSS** (Cascading Style Sheets) —
 
 
 
