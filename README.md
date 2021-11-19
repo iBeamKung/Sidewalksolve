@@ -9,8 +9,7 @@ This project is prepared in partial fulfillment of the requirements for the Soft
 - "Taksaporn Nuangkaew" s6301012630052@email.kmutnb.ac.th
 - "Prompaun thitipoomdeja" s6301012630133@email.kmutnb.ac.th
 
-# Overview - ภาพรวมของระบบ
-
+# Overview
 <p align="left">
   <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/overview2.png?raw=true">
 </p>
@@ -26,6 +25,21 @@ There is Sidewalksolve LINE official account for making a complaint with LINE. I
 
 ## Facebook Messenger
 There is Sidewalksolve Facebook official page where you can send messages or photos about your complaint with Facebook by integrating with Messenger API that supports to send messages in Facebook to our users. If you would like to make a complaint with Facebook, you can go through this <a href="https://www.facebook.com/Sidewalksolve/">link</a>.
+
+
+
+## Features
+- all complaints that are made with Sidewalksolve LINE, Facebook Messenger, or Web page will be shown in the admin dashboard with the complaint details such as personal information and details of the problem reported. 
+- Sidewalksolve web page supports different languages. the web page is translated by Google Translate, which means that all citizens with different ethnicity are supposed to make a complaint with Sidewalksolve.
+- You can see the video demonstration of making a complaint with sidewalksolve in this <a href="https://www.youtube.com/watch?v=smIDI_4isQk">link</a>.
+
+
+
+
+
+
+
+
 ### Backend ของเรานั้นจะประกอบไปด้วย 2 ภาษาด้วยกันคือ PHP,C
 
 #### PHP
