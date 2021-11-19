@@ -31,7 +31,9 @@ There is Sidewalksolve Facebook official page where you can send messages or pho
 
 You can see the video demonstration of making a complaint with sidewalksolve in this <a href="https://www.youtube.com/watch?v=smIDI_4isQk">link</a>.
 
-<p><img src="./image/Sidewalksolve.png"></p>
+<br>
+
+<p align="center"><img src="./image/sidewalksolve.png"></p>
 
 
 
