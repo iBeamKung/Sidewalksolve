@@ -30,7 +30,7 @@ There is Sidewalksolve Facebook official page where you can send messages or pho
 
 ## Features
 - all complaints that are made with Sidewalksolve LINE, Facebook Messenger, or Web page will be shown in the admin dashboard with the complaint details such as personal information and details of the problem reported. 
-- Sidewalksolve web page supports different languages. the web page is translated by Google Translate, which means that all citizens with different ethnicity are supposed to make a complaint with Sidewalksolve.
+- Sidewalksolve web page supports different languages. the web page is translated by Google Translate, which enables all citizens with different ethnicity to make a complaint with Sidewalksolve.
 - You can see the video demonstration of making a complaint with sidewalksolve in this <a href="https://www.youtube.com/watch?v=smIDI_4isQk">link</a>.
 
 
