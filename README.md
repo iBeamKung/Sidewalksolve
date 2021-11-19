@@ -10,9 +10,6 @@ This project is prepared in partial fulfillment of the requirements for the Soft
 - "Prompaun thitipoomdeja" s6301012630133@email.kmutnb.ac.th
 
 # Overview
-<p align="left">
-  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/overview2.png?raw=true">
-</p>
 
 There are 3 channels for making a complaint with Sidewalksolve: **Web page**, **LINE**, and **Facebook Messenger**.
 
@@ -33,7 +30,9 @@ There is Sidewalksolve Facebook official page where you can send messages or pho
 - Sidewalksolve web page supports different languages. the web page is translated by Google Translate, which enables all citizens with different ethnicity to make a complaint with Sidewalksolve.
 - You can see the video demonstration of making a complaint with sidewalksolve in this <a href="https://www.youtube.com/watch?v=smIDI_4isQk">link</a>.
 
-
+<p align="left">
+  <img src="https://github.com/iBeamKung/Sidewalksolve/blob/main/image/overview2.png?raw=true">
+</p>
 
 
 
