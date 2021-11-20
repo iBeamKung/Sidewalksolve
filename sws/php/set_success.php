@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $connect = mysqli_connect("sidewalksolve.xyz", "u722950798_admin", "Rsp010123131", "u722950798_sidewalksolve");
+    $connect = mysqli_connect("Host", "Username Database", "Password Database", "Database name");
     
     $sql = "UPDATE sws_data SET success=1 WHERE id=".$_POST['Id'];
     
